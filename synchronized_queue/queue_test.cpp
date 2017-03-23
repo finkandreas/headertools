@@ -1,4 +1,4 @@
-// g++ -std=c++11 -pthread -o main main.cpp
+// g++ -std=c++11 -pthread -o queue_test queue_test.cpp
 
 #include <iostream>
 #include <unistd.h>
