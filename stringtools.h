@@ -43,12 +43,14 @@ class estring {
       m_s = "";
       return std::getline(in, m_s);
     }
-    std::vector<estring> split(const estring& delim=",") const {
+    std::vector<estring> split(const estring& delim=",", bool discardEmpty=true) const {
       std::vector<estring> ret;
       size_t start = 0, pos;
       do {
         pos = m_s.find(delim.m_s, start);
-        ret.push_back(m_s.substr(start, pos-start));
+        if (false == discardEmpty || pos-start > delim.m_s.length()) {
+          ret.push_back(m_s.substr(start, pos-start));
+        }
         start = pos+delim.m_s.length();
       } while(pos != std::string::npos);
       return ret;
