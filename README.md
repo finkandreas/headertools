@@ -1,2 +1,2 @@
 # headertools
-C++ headertools that I am using in private projects
+[comment]: # "C++ headertools that I am using as submodule in other projects"
